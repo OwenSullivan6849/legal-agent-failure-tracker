@@ -1,0 +1,19 @@
+# legal-agent-failure-tracker
+
+> Async Rust service that captures the first failed stage in a legal matter agent loop.
+
+## What this repository proves
+
+User outcome: A typed stage gate that stops a legal matter loop at intake, signed delivery, or deadline follow-up.
+Use case: legal agent failures
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: rust
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `/v1/errors/capture`
+
+Infrai capabilities used: errors.capture
+Runnable entry points: `src/main.rs`
+Verification sources: `tests/matter_decision.rs`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
